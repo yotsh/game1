@@ -5,7 +5,7 @@ class GameState: # for managing gameplay status & used in game save file
         self.playerHealth = "" # not used yet, but its for managing abigail's health 
         self.playerInventory = "" # idk if i will do this one :/
         self.playerScene = "" # not used yet, but its for game save
-        self.deathReason = "" # for show the death reason on the game over screen
+        self.deathReason = "" # to show the death reason on the game over screen
 
 gameState = GameState()
         
@@ -30,7 +30,18 @@ def gameOver(): # Game Over
         print(f"Not {s1}, It's Yes or No")
         start()
     
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    #This game has Arg and Puzzles inspired by cicada 3301
+def scene3():
+        print("\nYou carefully step down the stairway and reach the bottom, where a hallway stretches ahead. Walking to the end,\n you find three more hallways—only one of them is the right path.")
+        s3q1 = input("[Left, Up, Right]: ")
+        if s3q1 == 'Left':
+            
+        elif s3q1 == 'Up':
+            
+        elif s3q1 == 'Right':
+            
+        else:
+            print('Invalid choice, try again.')
+            scene3()
 
 def scene2(): # Inside
     print('The Entrance is open!')
@@ -42,11 +53,10 @@ def scene2(): # Inside
     s2q1 = input('[ 1 ] [ 2 ] [ 3 ]: ')
     
     if s2q1 == '1':
-        # print("\nYou Proceed Safely step by step you go into the bottom the stairway, there you see a hallway")
-        print("yeah, im sorry but this game is not finished yet")
+        scene3()
         time.sleep(3)
     elif s2q1 == '2' or s2q1 == '3':
-        gameState.deathReason = "???"
+        gameState.deathReason = "Paranoia?"
         gameOver()
     else:
         print('Invalid choice, try again.')
